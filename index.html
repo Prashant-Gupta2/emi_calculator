@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+          <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+          <script scr="../node_modules/dist/js/bootstrap.bbundle.js"></script>
+          <script src="../node_modules/jquery/dist/jquery.js"></script>
+          <script src="../src/emi.js"></script>
+</head>
+<body class="container-fluid bg-secondary">
+    <div class="bg-light p-2 m-2">
+      <h2 class="text-center my-4">EMI Calculator</h2>
+      <div class="row my-2">
+        <div class="col">
+          <div class="input-group">
+                   <span class="fw-bold">Home Loan Amount:</span> <input type="text" id="txtamount"><span class="bi bi-currency-rupee input-group-text bg-secondary fw-bold"></span>
+          </div>
+        </div> 
+        <div class="col">
+          <div class="input-group">
+                    <span class="fw-bold">Intreast Rate:</span> <input type="text" id="txtrate"><span class="bi bi-percent input-group-text bg-secondary fw-bold"></span>
+          </div>
+        </div> 
+        <div class="col">
+          <div class="input-group">
+                    <span class="fw-bold">Loan Tenure:</span> <input type="text" id="txtyear"><span class="bi bi-calendar input-group-text bg-secondary fw-bold"></span>
+          </div>
+        </div>  
+      </div>
+      <div class="row my-3">
+       <div class="col">
+         <input type="range" min="100000" max="1000000" value="100000" id="rangeamount" class="form-range">
+         <span>&#8377;1,00,000</span>
+         <span class="float-end">&#8377;10,00,000</span>
+       </div>
+       <div class="col">
+         <input type="range" min="10.4" max="18.4" value="10.4" step="0.03" id="rangerate" class="form-range">
+         <span>10.4</span>
+         <span class="float-end">18.4</span>
+       </div>
+       <div class="col">
+         <input type="range"  id="rangeyear" min="1" max="5" value="1" class="form-range">
+         <span>1</span>
+         <span class="float-end">5</span>
+       </div>
+      </div>
+      <div class="row my-4">
+       <div class="col">
+         <button class="float-end btn btn-primary" id="txtcalculate">Calculate</button>
+       </div>
+      </div>
+      <div class="row my-4">
+        <p id="showemi" class="fw-bold fs-4 text-center"></p> 
+      </div>
+     </div>
+</body>
+</html>
